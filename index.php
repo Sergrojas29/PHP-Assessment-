@@ -1,53 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+// Version
+define('VERSION', '4.0.2.3');
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP Assessment</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+// Configuration
+if (is_file('config.php')) {
+	require_once('config.php');
+}
 
-<body>
+// Install
+if (!defined('DIR_APPLICATION')) {
+	header('Location: install/index.php');
+	exit();
+}
 
-    <form id="form" action="./result.php" method="post">
-        <label for="zipcode">Zipcode:</label>
-        <input required class="areaInput" placeholder="Enter your zipcode" type="text" name="zipcode">
-        <button type="submit">Enter</button>
-    </form>
+// Startup
+require_once(DIR_SYSTEM . 'startup.php');
 
-
-    <br>
-
-    <div id="phpecho">
-
-        <?php
-        //Scalar type
-        $fullName = ' Sergio Rojas';
-        $int = 15654;
-        $float = 2.567;
-        $bool = true;
-
-
-        //Array Type
-        $array = ["Dan", "steve", "Bob"];
-        echo $fullName;
-
-
-        echo $_SERVER["DOCUMENT_ROOT"];
-        echo "<br>";
-        echo $_SERVER["PHP_SELF"];
-        echo "<br>";
-
-        echo $_GET["name"];
-
-        if(true && true){
-            echo "hello World";
-        };
-
-        ?>
-    </div>
-
-</body>
-
-</html>
+// Framework
+require_once(DIR_SYSTEM . 'framework.php');

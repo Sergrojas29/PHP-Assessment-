@@ -27,7 +27,7 @@ form{
     flex-direction: column;
     width: 400px;
     color: white;
-    background: #c4c4ff;
+    /* background: #c4c4ff; */
     padding: 20px;
     box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.251);
     border-radius: 5px;
