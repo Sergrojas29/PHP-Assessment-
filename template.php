@@ -11,8 +11,8 @@
 <body>
 
     <form id="form" action="./result.php" method="post">
-        <label for="zipcode">Zipcode:</label>
-        <input required class="areaInput" placeholder="Enter your zipcode" type="text" name="zipcode">
+        <label for="zip_code">Zipcode:</label>
+        <input required class="areaInput" placeholder="Enter your zipcode" type="text" name="zip_code">
         <button type="submit">Enter</button>
     </form>
 

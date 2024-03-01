@@ -10,35 +10,44 @@
 
 <body>
 
+
+
+
+
     <?php
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $zipcode = (int)htmlspecialchars($_POST["zipcode"]);
 
-        echo var_dump(is_int($zipcode));
-        if (is_integer($zipcode)) {
-            echo $zipcode;
-            // echo '<script>alert("correct")</script>';
-        } else {
-            echo "it's not a intger";
-            // header("location: ./index.php");
-        }
-    }
+    $query = "SELECT * FROM `oc_address`;";
+    echo $query
 
 
-    function userfunction()
-    {
-        return "
-            <section id='container'>
-                <label for='zipcode'>Zipcode:</label>
-                <input required class='areaInput' placeholder='Enter your zipcode' type='text' name='zipcode'>
-                <button type='submit'>Enter</button>
-            </section>
-            ";
-    }
+    // if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    //     $zipcode = (int)htmlspecialchars($_POST["zipcode"]);
 
-    $test = userfunction();
+    //     echo var_dump(is_int($zipcode));
+    //     if (is_integer($zipcode)) {
+    //         echo $zipcode;
+    //         // echo '<script>alert("correct")</script>';
+    //     } else {
+    //         echo "it's not a intger";
+    //         // header("location: ./index.php");
+    //     }
+    // }
 
-    echo $test;
+
+    // function userfunction()
+    // {
+    //     return "
+    //         <section id='container'>
+    //             <label for='zipcode'>Zipcode:</label>
+    //             <input required class='areaInput' placeholder='Enter your zipcode' type='text' name='zipcode'>
+    //             <button type='submit'>Enter</button>
+    //         </section>
+    //         ";
+    // }
+
+    // $test = userfunction();
+
+    // echo $test;
 
 
 
